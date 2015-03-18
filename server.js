@@ -5,6 +5,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var http = require('http');
+var mysql = require('mysql');
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
@@ -14,7 +15,6 @@ var app = express();
 //VIEW ENGINE SETUP
 app.engine('html', require('ejs').renderFile);
 app.set('view engine', 'html');
-
 
 app.use('/static' ,express.static(path.join(__dirname, '/static')));
 app.use(favicon(__dirname + '/static/favicon.ico'));
@@ -37,16 +37,32 @@ app.get('*', function(req, res){
 });
 */
 app.listen(1000);
-console.log("HOLA");
-                               
+
+// DATABASE
+var connection = mysql.createConnection({
+  host     : 'jdbc:mysql://localhost/erasmus_madrid',
+  user     : 'root',
+  password : ''
+});
+connection.connect(function(err) {
+  if (err) {
+    console.error('error connecting: ' + err.stack);
+    return;
+  }
+
+  console.log('connected as id ' + connection.threadId);
+});
+
+connection.end();
+
+// ERROR HANDLERS
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     var err = new Error('Not Found');
     err.status = 404;
     next(err);
 });
-
-// error handlers
 
 // development error handler
 // will print stacktrace
