@@ -62,3 +62,14 @@
     font-size: 15px;
     margin-bottom: 13px;
 }
+
+.modal-title {
+  color: #FFFFFF;
+  font-size: 18px;
+}
+
+.modal-header {
+    background-color: #6BBE7A;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
