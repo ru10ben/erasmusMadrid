@@ -75,7 +75,29 @@
 }
 
 .modal-header {
-    background-color: #6BBE7A;
+    background-color: #77BED2;
     border-top-left-radius: 6px;
     border-top-right-radius: 6px;
+}
+
+#header {
+  background-color: #D5E1DD;
+  box-shadow: 6px 6px 29px -10px rgba(0,0,0,0.51);
+}
+
+.button-nav {
+  font-family: sans-serif;
+  color: black;
+  font-size: 16px;
+  background: #D5E1DD;
+  padding: 6px 10px 6px 10px;
+  border: solid #D5E1DD 2px;
+  text-decoration: none;
+}
+
+.button-nav:hover{
+  background-color: #2B3E42;
+  border-color: #2B3E42;
+  color: white;
+  box-shadow: 6px 6px 29px -10px rgba(0,0,0,0.51);
 }

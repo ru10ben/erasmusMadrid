@@ -5,10 +5,13 @@
     <link href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/shift.css" rel="stylesheet">
     <link rel="stylesheet" href="http://s3.amazonaws.com/codecademy-content/courses/ltp/css/bootstrap.css">
     <link rel="stylesheet" href="../static/style.css">
+    <link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <meta charset="UTF-8">
 </head>
 
-<body>
+<!--<body>
 <div class="nav">
     <div class="container">
         <ul class="pull-left">
@@ -19,7 +22,15 @@
             <li><a href="#">Log In</a></li>
         </ul>
     </div>
-</div>
+</div>-->
+
+<script>
+$(document).ready(function(){
+    $("#nav-header").load("navegador.html");
+});
+</script>
+
+<div id="nav-header"></div>
 
 <div class="jumbotron">
     <div class="container">
