@@ -83,6 +83,7 @@
 #header {
   background-color: #D5E1DD;
   box-shadow: 6px 6px 29px -10px rgba(0,0,0,0.51);
+  width: 100%;
 }
 
 .button-nav {
