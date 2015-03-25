@@ -40,20 +40,31 @@ app.listen(1000);
 
 // DATABASE
 var connection = mysql.createConnection({
-  host     : 'jdbc:mysql://localhost/erasmus_madrid',
-  user     : 'root',
-  password : ''
+    host     : 'localhost',
+    user     : 'root',
+    password : '',
+    port     : 3306,
+    database : 'erasmus_madrid',
 });
+
+//Check connection
 connection.connect(function(err) {
   if (err) {
     console.error('error connecting: ' + err.stack);
     return;
   }
-
   console.log('connected as id ' + connection.threadId);
 });
 
+//Query test
+connection.query('SELECT id_user FROM user', function(err, rows, fields) {
+
+  console.log('The solution is: ', rows[0].id_user);
+});
+
+//Conection end
 connection.end();
+
 
 // ERROR HANDLERS
 
