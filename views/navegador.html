@@ -28,26 +28,26 @@
 					<h4 class="modal-title" id="formModalLabel"><strong>Formulario de registro</strong></h4>
 				</div>
 				<div class="modal-body">
-					<form method="post" action="registry.js">
+					<form method="post" action="/registry">
 						<div class="form-group">
 							<label for="username">Usuario</label>
-							<input type="text" class="form-control" id="username" placeholder="Introduzca su usuario">
+							<input type="text" class="form-control" id="username" name="username" placeholder="Introduzca su usuario">
 						</div>
 						<div class="form-group">
 							<label for="password">Contraseña</label>
-							<input type="password" class="form-control" id="password" placeholder="Introduzca su contraseña">
+							<input type="password" class="form-control" id="password" name="password" placeholder="Introduzca su contraseña">
 						</div>
 						<div class="form-group">
 							<label for="password">Contraseña</label>
-							<input type="password" class="form-control" id="password" placeholder="Vuelva a introducir su contraseña">
+							<input type="password" class="form-control" id="password2" name="password2" placeholder="Vuelva a introducir su contraseña">
 						</div>
 						<div class="form-group">
 							<label for="email">Dirección de Email</label>
-							<input type="email" class="form-control" id="email" placeholder="Introduzca su email">
+							<input type="email" class="form-control" id="email" name="email" placeholder="Introduzca su email">
 						</div>
 						<div class="form-group">
 							<label for="date">Fecha de nacimiento</label>
-							<input type="date" class="form-control" id="date" placeholder="dd/mm/aaaa">
+							<input type="date" class="form-control" id="date" name="date" placeholder="dd/mm/aaaa">
 						</div>
 						<div class="checkbox">
 							<label>
@@ -72,7 +72,7 @@
 					<h4 class="modal-title" id="formModalLabel"><strong>Log in</strong></h4>
 				</div>
 				<div class="modal-body">
-					<form method="post" action="log.js">
+					<form method="post" action="/login">
 						<div class="form-group">
 							<label for="username">Usuario</label>
 							<input type="text" class="form-control" id="username" placeholder="Introduzca su usuario">
